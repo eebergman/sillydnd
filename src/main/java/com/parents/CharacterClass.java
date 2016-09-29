@@ -1,6 +1,5 @@
 package com.parents;
 
-import com.app.Weapons;
 import com.app.Weapons.Weapon;
 
 public class CharacterClass {
@@ -9,13 +8,13 @@ public class CharacterClass {
 	protected int magic = 0;
 	protected String name = null;
 	// Added Weapons
-	protected static Weapon weapon = null;
+	protected Weapon weapon = null;
 
 	public CharacterClass() {
 		super();
 	}
 
-	// Added weapons
+	// Added weapon
 	public CharacterClass(int health, int magic, String name, Weapon weapon) {
 		super();
 		this.health = health;

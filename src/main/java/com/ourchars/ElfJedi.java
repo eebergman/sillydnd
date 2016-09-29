@@ -1,6 +1,5 @@
 package com.ourchars;
 
-import com.app.Weapons;
 import com.app.Weapons.Weapon;
 import com.interfaces.Jedi;
 import com.parents.Elf;
@@ -13,8 +12,9 @@ public class ElfJedi extends Elf implements Jedi {
 		super();
 	}
 
-	public ElfJedi(int health, int magic, String name) {
-		super(health, magic, name);
+	// Added Weapon weapon
+	public ElfJedi(int health, int magic, String name, Weapon weapon) {
+		super(health, magic, name, weapon);
 	}
 
 	@Override
@@ -27,12 +27,14 @@ public class ElfJedi extends Elf implements Jedi {
 		super.setMagic(magic + 100);
 	}
 
-	//Overrode setWeapon
 	@Override
 	public void setWeapon(Weapon weapon) {
+		// TODO Auto-generated method stub
 		super.setWeapon(Weapon.LIGHTSABER);
 	}
 
+
+	
 	
 
 	
