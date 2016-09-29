@@ -33,10 +33,14 @@ public class ElfJedi extends Elf implements Jedi {
 		super.setWeapon(Weapon.LIGHTSABER);
 	}
 
+	public static ElfJedi makeElfJedi() {
 
-	
-	
+		ElfJedi ourElfJedi = new ElfJedi();
 
-	
+		ourElfJedi.setHealth(0);
+		ourElfJedi.changeHealth();
+
+		return ourElfJedi;
+	}
 
 }

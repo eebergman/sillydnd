@@ -2,8 +2,8 @@ package com.app;
 
 import java.util.Scanner;
 
-import com.parents.*;
-import com.ourchars.*;
+import com.ourchars.HumanWizard;
+import com.ourchars.HumanWizard.*;
 
 public class App {
 
@@ -11,14 +11,20 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		HumanWizard ourHumanWizard = new HumanWizard();
+		
+		ourHumanWizard= ourHumanWizard.makeHumanWizard();
+		
+		System.out.println(ourHumanWizard.getWeapon());
+		System.out.println(ourHumanWizard.getHealth());
+		System.out.println(ourHumanWizard.getMagic());
+		
+		
 		boolean userInputCorrect = false;
 		
-		ElfJedi ourElfJedi = makeElfJedi();
-		
-		System.out.println(ourElfJedi.getHealth());
-
+	
 		 do {
-			System.out.println("Welcome to Silly D'n'D\n" 
+			System.out.println("\n\n\nWelcome to Silly D'n'D\n" 
 					+ "Would you like to play as a\n" 
 					+ "1. Human Wizard\n"
 					+ "2. Elf Royal\n" 
@@ -54,14 +60,6 @@ public class App {
 		 
 	}
 
-	private static ElfJedi makeElfJedi() {
-		
-		ElfJedi ourElfJedi = new ElfJedi();
-		
-		ourElfJedi.setHealth(0);
-		ourElfJedi.changeHealth();
-		
-		return ourElfJedi;
-	}
+
 	
 }
